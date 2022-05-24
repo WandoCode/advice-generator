@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes spin-right {
+  0% {
+    transform: rotateY(0);
+  }
+  25% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  75% {
+    transform: rotate(135deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+@keyframes spin-left {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(-90deg);
+  }
+  75% {
+    transform: rotate(-135deg);
+  }
+  100% {
+    transform: rotate(-180deg);
+  }
+}
+body, h1 {
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  font-size: 28px;
+  background-color: hsl(218deg, 23%, 16%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: hsl(150deg, 100%, 66%);
+  font-size: 0.4em;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  font-weight: 600;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(150deg, 100%, 66%);
+  border: none;
+  border-radius: 5em;
+  height: 5em;
+  width: 5em;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: hsl(217deg, 19%, 24%);
+  width: 500px;
+  border-radius: 0.4em;
+  margin: 0.5em;
+  padding: 0.6em 1.1em 2em 1.1em;
+  position: relative;
+}
+.card__title {
+  margin: 2.7em 0;
+}
+.card__text {
+  color: hsl(193deg, 38%, 86%);
+  text-align: center;
+}
+.card__button {
+  position: absolute;
+  bottom: -2.5em;
+  transition: 0.2s;
+}
+.card__button:hover {
+  box-shadow: 0 0 20px 2px hsl(150deg, 100%, 66%);
+}
+
+.separator {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 2em;
+}
+.separator__side {
+  border-top: 1px solid hsl(217deg, 19%, 38%);
+  flex-basis: 41%;
+}
+.separator__center {
+  position: relative;
+  display: flex;
+}
+.separator__center__equal {
+  margin: 0 0.12em;
+  position: relative;
+  top: -0.3em;
+  width: 0.22em;
+  height: 0.61em;
+  background-color: hsl(193deg, 38%, 86%);
+  border-radius: 5em;
+}
+.separator__center__equal--spin-right {
+  animation: spin-right 0.2s linear;
+}
+.separator__center__equal--spin-left {
+  animation: spin-left 0.2s linear;
+}
+
+/*# sourceMappingURL=main.css.map */

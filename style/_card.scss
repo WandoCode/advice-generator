@@ -1,0 +1,32 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $c-main-bkgd;
+  width: 500px;
+  border-radius: 0.4em;
+  margin: 0.5em;
+  padding: 0.6em 1.1em 2em 1.1em;
+  position: relative;
+
+  &__title {
+    margin: 2.7em 0;
+  }
+
+  &__text {
+    color: $c-primary;
+    text-align: center;
+  }
+
+  &__button {
+    position: absolute;
+    bottom: -2.5em;
+    transition: 0.2s;
+
+    &:hover {
+      box-shadow: 0 0 20px 2px $c-secondary;
+
+    }
+  }
+
+}
