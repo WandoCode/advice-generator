@@ -9,10 +9,15 @@ window.onload = async () => {
 
     /* Fetch advice from API */
     const adviceFetcher = async () => {
-        let rep = await fetch(adviceURL);
-        let adviceObject = await rep.json();
+        try {
+            let rep = await fetch(adviceURL);
+            if (!rep.ok) console.error(`HTTP fetching error status: ${rep.status}`)
+            let adviceObject = await rep.json();
 
-        return adviceObject.slip
+            return adviceObject.slip
+        } catch (e) {
+            console.error("Error fetching from API:" + e)
+        }
     }
 
     /* Display a new advice */
